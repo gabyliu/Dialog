@@ -8,7 +8,7 @@ React版弹框
 {
                 extendClassName: 'myDialog',//string, 扩展class
                 title: '我的弹窗标题',//string，弹框标题
-                content: '我的弹窗内容',//string, 弹框内容
+                content: '我的弹窗内容',//string, 弹框内容，也可以是另一个组件
                 id: 'myDialog',
                 handle: this.handleDialog//object, 接收弹框点击事件
             }
@@ -24,16 +24,16 @@ React版弹框
 ```
 
 ### 有哪些功能
-1. 自定义弹框内容
+1.自定义弹框内容
 ![content][2]
 
-2. 自定义控制弹窗是否出现
+2.自定义控制弹窗是否出现
 ```
 //弹窗是否显示由父元素控制，以这种形式
 {this.state.isShowDialog ? <Dialog data={this.state.Dialog} /> : null}
 ```
 
-3. 组件返回
+3.组件返回
 ```
 {
     id: v.id,//弹窗中按钮的id，取消按钮id为dialog_btn_cancel，确定按钮id为dialog_btn_sure
